@@ -28,7 +28,7 @@ fs.readdirSync('./commands/').forEach(dir => {
                 client.commands.set(fileGet.help.name, fileGet);
                 
                 fileGet.help.aliases.forEach(alias => {
-                    client.aliases.set(alias, fileGet.help.name);
+                    client.aliases.set(fileGet.help.name, alias);
                 })
             } catch (err) {
                 return console.log(err);
